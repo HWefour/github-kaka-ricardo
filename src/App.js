@@ -4,7 +4,7 @@ import './App.css';
 import BasicExample from './navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BackgroundImg from './background';
-import Carousels from './carousel';
+/* import Carousels from './carousel'; */
 import RechercheFilm from './recherchefilm';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <BasicExample/>
       <BackgroundImg/>
-      <Carousels/>
+      {/* <Carousels/>  */}
       <RechercheFilm/>
 
     </div>

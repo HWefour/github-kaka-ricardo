@@ -16,7 +16,7 @@ function Carousels(props) {
                             <img src={require("./card (2).png")} />
                         </div>
                         <div className="item">
-                            <img src="./card (3).png" />
+                            <img src={require("./card (3).png")}/>
                         </div>
                         <div className="item">
                             <img src={require("./card (8).png")}/>

@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #212529;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -87,3 +89,31 @@
   height: 577px;
   background-size: 250%;
 } */
+#imgfilm{
+  text-align: center;
+}
+#thewok {
+  height: 100vh;
+  width: 100vw;
+}
+#bedflixlogo{
+  height : 40px;
+  width: 100px;
+}
+#basic-navbar-nav {
+    display: flex;
+    justify-content: end;
+}
+.navbar-collapse {
+  align-items: center;
+  flex-grow: 0!important;
+}
+.imgposter{
+  height: 400px;
+  width: 275px;
+  margin: 15px;
+}
+.imgposter:hover {
+  transform: scale(1.3);
+  box-shadow:  0 0 11px rgb(255, 255, 255); 
+}

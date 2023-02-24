@@ -13,41 +13,43 @@ function RechercheFilm() {
     return markup;
   }
 
-  async function rechercheFilm() {
+  async function rechercheFilms() {
     try {
-      const url = `https://api.betaseries.com/movies/search?key=${key}&title=${val}`;
+      const url = `https://api.betaseries.com/movies/search?key=${key}&title=${val}&nbpp=12`;
       const response = await fetch(url);
       const data = await response.json();
       const posters = data.movies.map((movie) => movie.poster);
-  
+
       for (const poster of posters) {
         if (poster !== 'N/A') {
           const fuei = createDom('img', '', imgfilms);
           fuei.setAttribute('src', poster);
+          fuei.classList.add('imgposter');
+
         }
       }
     } catch (error) {
       console.error(error);
     }
   }
-  
+
   function handleRecherche() {
-    rechercheFilm();
+    rechercheFilms();
   }
-  
+
   function handleInputChange(event) {
     setVal(event.target.value);
   }
-  
+
   return (
-    <div>
+    <div >
       <input id="recherche" type="text" value={val} onChange={handleInputChange} />
       <button id="btnRecherche" onClick={handleRecherche}>Rechercher</button>
       <div id="imgfilm"></div>
     </div>
   );
-  }  
+}
 
-  export default RechercheFilm; 
-  
- 
+export default RechercheFilm;
+
+
